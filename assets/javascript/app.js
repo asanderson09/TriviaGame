@@ -1,8 +1,13 @@
 $(document).ready(function () {
+    //Start button to kick everything off
     $('#startButton').on('click', function () {
+        // for loop that runs through the questions array
         for (var i = 0; i < questions.length; i++) {
+            // Takes the question from the questions array and appends them displaying them in a header
             $('#container').append('<h2>' + questions[i].question + '</h2>');
+            // for loop that runs through the answers from their respective questions index
             for (var j = 0; j < questions[i].answers.length; j++) {
+                //  append each question with a radio type,  a name that is equal to the question, and a value that is equal to the answer.
                 $('#container').append("<input type= 'radio' name= 'question-" + i + "' value= '" + questions[i].answers[j] + "'>" + questions[i].answers[j])
 
             }
