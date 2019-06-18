@@ -10,7 +10,7 @@ $(document).ready(function () {
             // for loop that runs through the answers from their respective questions index
             for (var j = 0; j < questions[i].answers.length; j++) {
                 //  append each answer with a radio type,  a name that is equal to the question, and a value that is equal to the answer.
-                $('#container').append("<input type= 'radio' name='question- " + i + " " +"' value= '" + questions[i].answers[j] + "' >" + questions[i].answers[j]);
+                $('#container').append("<input type= 'radio' name='question- " + i + " " + "' value= '" + questions[i].answers[j] + "' >" + questions[i].answers[j]);
 
             }
 
@@ -21,9 +21,9 @@ $(document).ready(function () {
 
 // Array for questions, 
 var questions = [{
-    question: 'What is the largest bone in the human body',
-    answers: [" Jaw ", " Scapula ", ' Femur ', ' Tibia '],
-    rightAnswer: ' Femur '
+    question: 'What letter grade you would give this Triva game?',
+    answers: [" A ", " A ", ' A ', ' A '],
+    rightAnswer: ' A '
 }, {
     question: 'What is the largest bone in the human body?',
     answers: [" Jaw ", " Scapula ", ' Femur ', ' Tibia '],
