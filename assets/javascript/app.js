@@ -1,14 +1,16 @@
 $(document).ready(function () {
     //Start button to kick everything off
     $('#startButton').on('click', function () {
+        //removes start button once pressed
+        $('#startButton').remove();
         // for loop that runs through the questions array
         for (var i = 0; i < questions.length; i++) {
             // Takes the question from the questions array and appends them displaying them in a header
             $('#container').append('<h2>' + questions[i].question + '</h2>');
             // for loop that runs through the answers from their respective questions index
             for (var j = 0; j < questions[i].answers.length; j++) {
-                //  append each question with a radio type,  a name that is equal to the question, and a value that is equal to the answer.
-                $('#container').append("<input type= 'radio' name= 'question-" + i + "' value= '" + questions[i].answers[j] + "'>" + questions[i].answers[j])
+                //  append each answer with a radio type,  a name that is equal to the question, and a value that is equal to the answer.
+                $('#container').append("<input type= 'radio' name='question- " + i + " " +"' value= '" + questions[i].answers[j] + "' >" + questions[i].answers[j]);
 
             }
 
@@ -17,41 +19,41 @@ $(document).ready(function () {
     })
 });
 
-
+// Array for questions, 
 var questions = [{
     question: 'What is the largest bone in the human body',
-    answers: ["Jaw", "Scapula", 'Femur', 'Tibia'],
-    rightAnswer: 'Femur'
+    answers: [" Jaw ", " Scapula ", ' Femur ', ' Tibia '],
+    rightAnswer: ' Femur '
 }, {
     question: 'What is the largest bone in the human body?',
-    answers: ["Jaw", "Scapula", 'Femur', 'Tibia'],
-    rightAnswer: 'Femur'
+    answers: [" Jaw ", " Scapula ", ' Femur ', ' Tibia '],
+    rightAnswer: ' Femur '
 }, {
     question: 'Which pop album is the best selling of all time?',
-    answers: ["M.J. Thriller", "Prince Purple Rain", 'The Beatles The Beatles'],
-    rightAnswer: 'M.J. Thriller '
+    answers: [" M.J. Thriller ", "Prince Purple Rain ", ' The Beatles The Beatles '],
+    rightAnswer: ' M.J. Thriller '
 }, {
     question: 'What is the total number of dots on a pair of dice?',
-    answers: ["50", "42", '38', '40'],
-    rightAnswer: '42'
+    answers: [" 50 ", " 42 ", ' 38 ', ' 40 '],
+    rightAnswer: ' 42 '
 }, {
     question: 'Which part of the body would a chiropodist treat?',
-    answers: ["The arm", "The back", 'The feet', 'The butt'],
-    rightAnswer: 'The feet'
+    answers: [" The arm ", " The back ", ' The feet ', ' The butt '],
+    rightAnswer: ' The feet '
 }, {
     question: 'How many rings make up the symbol of the Olympic Games?',
-    answers: ["3", "6", '4', '5'],
-    rightAnswer: '5'
+    answers: [" 3 ", " 6 ", ' 4 ', ' 5 '],
+    rightAnswer: ' 5 '
 }, {
     question: 'What is the colored part of the human eye called?',
-    answers: ["Cornea", "Iris", 'Bulbus', 'Retina'],
-    rightAnswer: 'Iris'
+    answers: [" Cornea ", " Iris ", ' Bulbus ', ' Retina '],
+    rightAnswer: ' Iris '
 }, {
     question: 'What is a group of lions called?',
-    answers: ["A pack", "A mob", 'A pride', 'A flock'],
-    rightAnswer: 'A pride'
+    answers: [" A pack ", " A mob ", ' A pride ', ' A flock '],
+    rightAnswer: ' A pride '
 }, {
     question: 'The Statue of Liberty was a gift to commemorate what specific group?',
-    answers: ["Military Troops", "American Patriots", 'Hippies', 'Slaves'],
-    rightAnswer: 'Slaves'
+    answers: [" Military Troops ", " American Patriots ", ' Hippies ', ' Slaves '],
+    rightAnswer: ' Slaves '
 }];
